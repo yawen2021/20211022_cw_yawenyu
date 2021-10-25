@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊厲害</title>
+    
+    <link rel="icon" href="https://www.commonhealth.com.tw/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon.png" type="image/x-icon">
+    <link href="https://www.commonhealth.com.tw/assets/images/favicon-16x16.png" rel="apple-touch-icon" sizes="16x16">
+    <link href="https://www.commonhealth.com.tw/assets/images/favicon-32x32.png" rel="apple-touch-icon" sizes="32x32">
+    <link rel="apple-touch-icon" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon_58.png">
+    <link rel="apple-touch-icon" sizes="80x80" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon-80.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon-180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon-167.png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/style.css">
+
+    
+</head>
+<body>
+    <!--sidebar for mobile-->
+    <div id="mMenuList" class="sideMenu">
+        <a class="closeBtn" onClick="closeMenu()">&times;</a>
+        <ul>
+            <li class="animate__animated animate__fadeInUp animate__faster"><a href="#news" onClick="closeMenu()"><h3>最新消息</h3></a></li>
+            <li class="animate__animated animate__fadeInUp animate__fast"><a href="#member" onClick="closeMenu()"><h3>團隊成員</h3></a></li>
+            <li class="animate__animated animate__fadeInUp animate__delay"><a href="#memoribila" onClick="closeMenu()"><h3>大事記</h3></a></li>
+            <li>
+                <div class="iconSocialMedia iconSocialMedia-fb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                </div>
+                <div class="iconSocialMedia iconSocialMedia-line">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-line" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0zM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157zm.791-2.924h.562c.086 0 .155.07.155.156v3.486c0 .086-.07.155-.155.155h-.562a.156.156 0 0 1-.156-.155V4.918c0-.086.07-.156.156-.156zm3.863 0h.56c.087 0 .157.07.157.156v3.486c0 .086-.07.155-.156.155h-.561a.155.155 0 0 1-.04-.005h-.002a.168.168 0 0 1-.011-.004l-.005-.002-.007-.003a.066.066 0 0 1-.008-.004L9.6 8.54l-.01-.006-.001-.001a.154.154 0 0 1-.04-.039l-1.6-2.16v2.07a.155.155 0 0 1-.155.156h-.561a.156.156 0 0 1-.156-.155V4.918c0-.086.07-.156.156-.156H7.8l.005.001h.006l.003.001h.006l.01.003h.002l.002.001.01.003.005.002a.09.09 0 0 1 .009.004l.003.001.002.001a.113.113 0 0 1 .013.008l.003.002.005.003v.001c.002 0 .003.002.004.003a.092.092 0 0 1 .008.006l.003.003a.17.17 0 0 1 .023.026L9.52 6.99V4.918c0-.086.07-.156.156-.156zm3.815.717c0 .086-.07.156-.155.156H11.81v.59h1.525c.086 0 .155.07.155.155v.561c0 .086-.07.156-.155.156H11.81v.59h1.525c.086 0 .155.07.155.155v.561c0 .086-.07.156-.155.156h-2.242a.155.155 0 0 1-.11-.045l-.002-.003a.155.155 0 0 1-.044-.107V4.918c0-.042.017-.08.043-.107l.003-.003.001-.001a.155.155 0 0 1 .109-.045h2.242c.086 0 .155.07.155.156v.561z"/>
+                    </svg>
+                </div>
+            </li>
+        </ul>
+    </div> 
+    <script>
+        // menu for mobile
+        function openMenu() {
+            document.getElementById('mMenuList').style.display = 'block';
+        }
+        function closeMenu() {
+            document.getElementById('mMenuList').style.display = 'none';
+        }
+    </script>
+
+
+    
+    <header id="navbar">
+        <div class="container">
+            <h2 class="logo"><img src="https://www.commonhealth.com.tw/assets/images/favicon-32x32.png">熊厲害</h2>
+            <nav>
+                <ul>
+                    <li><a href="#news"><span>最新消息</span></a></li>
+                    <li><a href="#member"><span>團隊成員</span></a></li>
+                    <li><a href="#memoribila"><span>大事記</span></a></li>
+                    <li class="iconSocialMedia iconSocialMedia-fb">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg>
+                    </li>
+                    <li class="iconSocialMedia iconSocialMedia-line">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-line" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0zM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157zm.791-2.924h.562c.086 0 .155.07.155.156v3.486c0 .086-.07.155-.155.155h-.562a.156.156 0 0 1-.156-.155V4.918c0-.086.07-.156.156-.156zm3.863 0h.56c.087 0 .157.07.157.156v3.486c0 .086-.07.155-.156.155h-.561a.155.155 0 0 1-.04-.005h-.002a.168.168 0 0 1-.011-.004l-.005-.002-.007-.003a.066.066 0 0 1-.008-.004L9.6 8.54l-.01-.006-.001-.001a.154.154 0 0 1-.04-.039l-1.6-2.16v2.07a.155.155 0 0 1-.155.156h-.561a.156.156 0 0 1-.156-.155V4.918c0-.086.07-.156.156-.156H7.8l.005.001h.006l.003.001h.006l.01.003h.002l.002.001.01.003.005.002a.09.09 0 0 1 .009.004l.003.001.002.001a.113.113 0 0 1 .013.008l.003.002.005.003v.001c.002 0 .003.002.004.003a.092.092 0 0 1 .008.006l.003.003a.17.17 0 0 1 .023.026L9.52 6.99V4.918c0-.086.07-.156.156-.156zm3.815.717c0 .086-.07.156-.155.156H11.81v.59h1.525c.086 0 .155.07.155.155v.561c0 .086-.07.156-.155.156H11.81v.59h1.525c.086 0 .155.07.155.155v.561c0 .086-.07.156-.155.156h-2.242a.155.155 0 0 1-.11-.045l-.002-.003a.155.155 0 0 1-.044-.107V4.918c0-.042.017-.08.043-.107l.003-.003.001-.001a.155.155 0 0 1 .109-.045h2.242c.086 0 .155.07.155.156v.561z"/>
+                        </svg>
+                    </li>
+                </ul>
+                <div class="mMenu" onClick="openMenu()">☰</div>
+            </nav>
+        </div>
+    </header>
+    
+    
+
+    <div class="content">
+        <!--1.kv-->
+        <section class="keyVisual">
+            <div class="container">
+                <div class="imgKv">
+                    <span>
+                        熊厲害<br>是一個提供健康、醫療等資訊的線上平台，<br>
+                        我們提供醫師、護理師、營養師、運動教練等專家對於生活的建議及精確的健康資訊，<br>
+                        希望帶給大家健康且正確的的生活觀念
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!--2.最新消息-->
+        <section id="news">
+            <div class="container">
+                <h2>最新消息</h2>
+                <article>
+                    <ul>
+                        <li>
+                            <span class="newsDate">2021.01.10</span>
+                            <label class="newsType">
+                                <img src="images/icon-media.svg">
+                                <span>媒體報導</span>
+                            </label>
+                            <h3 class="newsText">LINE TODAY - 健康圖解懶人包「熊厲害」！帶你健康生活ㄧ整年</h3>
+                        </li>
+                        <li>
+                            <span class="newsDate">2020.06.13</span>
+                            <label class="newsType">
+                                <img src="images/icon-award.svg">
+                                <span>獲獎</span>
+                            </label>
+                            <h3 class="newsText">熊厲害獲得 第19屆經濟部「新創事業獎」</h3>
+                        </li>
+                        <li>
+                            <span class="newsDate">2020.04.03</span>
+                            <label class="newsType">
+                                <img src="images/icon-point.svg">
+                                <span>大事記</span>
+                            </label>
+                            <h3 class="newsText">口袋熊登上康健專欄</h3>
+                        </li>
+                        <li>
+                            <span class="newsDate">2020.01.10</span>
+                            <label class="newsType">
+                                <img src="images/icon-media.svg">
+                                <span>媒體報導</span>
+                            </label>
+                            <h3 class="newsText">Ettoday - 上醫院看病不再迷惘！康健 KB 知識庫 找對醫院看對科</h3>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!--3.團隊成員-->
+        <section id="member">
+            <div class="container">
+                <h2>團隊成員</h2>
+                <article class="">
+                    <ul class="multiple-items">
+                        <li class="swiper-slide">
+                            <img src="images/member-nutrition.jpg">
+                            <span>營養師</span>
+                            <h3>熊蓋讚</h3>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/member-dr.jpg">
+                            <span>駐站醫師</span>
+                            <h3>口袋熊</h3>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/member-owner.jpg">
+                            <span>創辦人</span>
+                            <h3>熊健康</h3>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/member-yoga.jpg">
+                            <span>瑜伽老師</span>
+                            <h3>熊愛水</h3>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/member-sport.jpg">
+                            <span>體適能教練</span>
+                            <h3>熊舒適</h3>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!--4.大事記-->
+        <section id="memoribila">
+            <div class="container">
+                <h2>大事記</h2>
+                <article>
+                    <div class="timeline">
+                        <div class="timelineBar"></div> 
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="timelineDate">2016年</span>
+                            <h3>組織成立</h3>
+                            <span class="timelineText">熊健康與研究所時結識的好友口袋熊，創立本組織「熊厲害」</span>
+                        </li>
+                        <li>
+                            <span class="timelineDate">2018年</span>
+                            <h3>康健樂活節形象代言</h3>
+                            <span class="timelineText">組織全員受邀擔任康健「樂活節」形象代言</span>
+                        </li>
+                        <li>
+                            <span class="timelineDate">2019年</span>
+                            <h3>口袋熊在症狀檢測服務</h3>
+                            <span class="timelineText">口袋熊開始於「 KB 知識庫 症狀檢測」為民眾免費服務</span>
+                        </li>
+                        <li>
+                            <span class="timelineDate">2020年</span>
+                            <h3>口袋熊登上康健專欄</h3>
+                            <span class="timelineText">「口袋熊醫師」系列文章，以圖解的形式正式在康健專欄上架</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+
+        <footer>
+            <small>Copyright © 2021 熊厲害.<br>All rights reserved. 版權所有，禁止擅自轉貼節錄</small>
+        </footer>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script type="text/javascript">
+        if($(window).width() < 1024) {
+            $('.multiple-items').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1, 
+                speed: 200,
+                
+                prevArrow: '<button type="button" class="slick-prev"><img src="images/chevron-compact-left.svg"></button>',
+                nextArrow: '<button type="button" class="slick-next"><img src="images/chevron-compact-right.svg"></button>',
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                ]
+            });
+        }
+    </script>
+    
+    <script>
+        // fixed menu
+        window.onscroll = function myFunction() {
+            
+            var navbar = document.getElementById('navbar');
+            var sticky = navbar.offsetTop;
+
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add('sticky')
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        }
+
+    </script>
+</body>
+</html>
