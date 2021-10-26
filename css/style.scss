@@ -9,6 +9,8 @@ $secondary-color: #ef8200;
 $secondary-color-dark: #b65400;
 $secondary-color-light: #ffb242;
 
+$hover-color: #f5f4ee;
+
 $font-color-light: #fff;
 $font-color-dark: #333;
 
@@ -45,8 +47,7 @@ $padding-content-m: 6vw;
 }
 
 
-// txt & area ----------------------------------
-
+// text & area ----------------------------------
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -54,24 +55,24 @@ $padding-content-m: 6vw;
 }
 
 h2 {
-    font-size: 34px;
+    font-size: 32px;
     display: inline-block;
 }
 
 h3 {
-    font-size: 22px;
-    line-height: 1.5rem;
+    font-size: 24px;
+    line-height: 1.75rem;
     @media screen and (max-width: 768px) {
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 1.65rem;
     }
 }
 
 span {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     @media screen and (max-width: 768px) {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 }
 
@@ -91,35 +92,45 @@ html {
     }
 }
 
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
 section {
     border-bottom: 1px solid rgba($primary-color, 0.3);
-    padding-bottom: 40px;
+    padding-bottom: 40px;;
     h2 {
         border-top: 6px solid $primary-color;
         padding-top: 8px;
         position: relative;
-        top: -29px;
+        top: -28px;
         color: $primary-color;
         @media screen and (max-width: 768px) {
             padding: 8px;
+            top: -27px;
         }
     }
 }
 
 .container {
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+    }
 }
 
 article {
     padding: $padding-content;
     padding-top: 0px;
-    margin-top: -29px;
+    margin-top: -28px;
     @media screen and (max-width: 768px) {
         padding: $padding-content-m;
         margin-top: -15vw;
     }
 }
+
 
 // sidebar for mobile -----------------------------------
 #mMenuList {
@@ -141,19 +152,17 @@ article {
             font-size: 3rem;
             font-weight: 300;
             margin: 2vw;
-            opacity: 0.8;
-            color: $font-color-light;
+            opacity: 0.9;
+            color: $secondary-color-light;
         }
         ul {
             flex-direction: column;
             text-align: center;
-            height: 100vh;
             padding: 20vw 10vw;
             li {
                 width: 100%;
                 margin: 2vw auto;
-                padding: 0 4vw;
-                border-bottom: 1px solid $primary-color-dark;
+                border-bottom: 1px dotted $primary-color-dark;
                 &:nth-last-of-type(1) {
                     @include flex-Hcenter-Vcenter;
                     border-bottom: none;
@@ -167,8 +176,7 @@ article {
                     }
                 }
                 a {
-                    color: rgba($font-color-light, 0.95);
-                    
+                    color: rgba($font-color-light, 0.98);
                     h3 {
                         line-height: 0.8rem;
                         font-size: 28px;
@@ -181,33 +189,44 @@ article {
 }
 
 
-
 // header -----------------------------------
 header {
     width: 100%;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
     z-index: 990;
-    // background-color: $primary-color-dark;
     background: linear-gradient(45deg, rgba(0,105,24,1) 0%,rgba(0,153,68,1) 100%);
     color: #fff;
     .container {
         @include flex-Hbetween-Vcenter;
         .logo {
+            @include flex-Hleft-Vcenter;
             margin: 20px 0;
             font-family: "Microsoft JhengHei", sans-serif;
             img {
                 margin-right: 8px;
+                width: 32px;
+                height: 32px;
+            }
+            small {
+                color: $secondary-color-light;
+                font-size: 12px;
+                padding-left: 12px;
+                letter-spacing: 2px;
+            }
+            @media screen and (max-width: 576px) {
+                small {
+                    display: none;
+                }
             }
         }
         ul {
             @include flex-Hcenter-Vcenter;
             li {
                 padding: 0 12px;
-                border-right: 1px solid rgba(0,0,0,0.5);
-                
+                border-right: 1px dotted rgba(0,0,0,0.5);
                 &:hover span {
                     border-bottom: 5px solid $secondary-color-light;
-                    transition: .3s;
+                    transition: .2s;
                 }
                 &:nth-last-of-type(1), &:nth-last-of-type(2), &:nth-last-of-type(3) {
                     border-right: none;
@@ -215,7 +234,11 @@ header {
                 svg {
                     width: 26px;
                     height: auto;
-                    color: $secondary-color-light;
+                    &:hover {
+                       color: $secondary-color-light; 
+                       cursor: pointer;
+                       transition: .2s;
+                    }
                 }
                 @media screen and (max-width: 768px) {
                     display: none;
@@ -236,10 +259,18 @@ header {
                 display: block;
                 font-size: 2.2rem;
                 margin: {
+                    right: 3vw;
+                    top: -6vw;
+                }
+                color: $secondary-color-light;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .mMenu {
+                margin: {
                     right: 4vw;
                     top: -10vw;
                 }
-                color: $secondary-color-light;
             }
         }
     }
@@ -249,7 +280,7 @@ header {
 }
 // page content
 .content {
-	padding: 0px;
+	padding-top: 0px;
 }
 
 .sticky {
@@ -259,13 +290,11 @@ header {
 	left: 0;
 }
 .sticky + .content {
-	padding-top: 80px;
+	padding-top: 76px;
     @media screen and (max-width: 768px) {
         padding-top: 11vw;
     }
 }
-
-
 
 
 // key visual -----------------------------------
@@ -274,28 +303,35 @@ section.keyVisual {
     background: url('../images/kv.jpg') no-repeat center center/cover;
     border-bottom: none;
     .container {
-        max-width: 100%;
+        width: 100%;
         height: 430px;
-        background: linear-gradient(0deg, rgba(0,0,0,0.66) 33%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.33) 100%);
+        background: linear-gradient(90deg, rgba(0,0,0,0.66) 33%, rgba(0,0,0,0) 76%, rgba(0,0,0,0.33) 100%);
         .imgKv {
             height: 100%;
-            @include flex-Hcenter-Vbottom;
+            @include flex-Hcenter-Vcenter;
             span {
                 width: 1200px;
-                margin: 0 auto;
-                text-align: center;
+                text-align: left;
                 padding: $padding-content;
                 color: $font-color-light;
-                line-height: 1.75rem;
                 letter-spacing: 2px;
+                font-size: 32px;
+                line-height: 2.6rem;
+                filter: drop-shadow(1px 1px 2px rgba(0,0,0,1));
                 @media screen and (max-width: 768px) {
-                    line-height: 1.2rem;
                     padding: $padding-content-m;
+                    font-size: 0.9rem;
+                    line-height: 1.2rem;
                 }
             }
         }
+        @media screen and (max-width: 768px) {
+            background: linear-gradient(0deg, rgba(0,0,0,0.66) 33%, rgba(0,0,0,0) 76%, rgba(0,0,0,0.33) 100%);
+            .imgKv {
+                @include flex-Hcenter-Vbottom;
+            }
+        }
     }
-    
 }
 
 
@@ -305,22 +341,28 @@ section#news {
         flex-direction: column;
         li {
             @include flex-Hleft-Vcenter;
-            background-color: rgba($secondary-color, 0.1);
+            background: rgba(255,255,255,0.9);
             width: 90%;
-            border-radius: 8px;
+            border-radius: 12px;
             margin: 8px auto;
             padding: 0 32px;
+            box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+            transition: .2s;
+            &:hover {
+                background: $hover-color;
+                cursor: pointer;
+            }
             .newsDate {
                 color: rgba($font-color-dark, 0.6);
                 padding-right: 20px;
             }
             .newsType {
                 @include flex-Hleft-Vcenter;
-                color: $primary-color-dark;
-                width: 175px;
-                padding: 0 20px;
-                margin: 0 0 0 10px;
-                border-left: 1px solid rgba(0,0,0,0.1);
+                color: $primary-color;
+                width: 150px;
+                padding: 0 18px;
+                border-left: 1px dotted rgba(29, 21, 21, 0.2);
+                border-right: 1px dotted rgba(29, 21, 21, 0.2);
                 img {
                     width: 32px;
                     height: auto;
@@ -329,25 +371,28 @@ section#news {
                     padding-left: 6px;
                 }
             }
+            .newsText {
+                padding: 0 0 0 18px;
+            }
             @media screen and (max-width: 768px) {
                 width: 100%;
                 flex-wrap: wrap;
                 padding: 2vw 4vw;
                 .newsDate {
-                    padding: 1vw;
+                    padding: 1vw 2vw 1vw 0;
                 }
                 .newsType {
                     width: auto;
                     padding: 1vw 2vw;
-                    border-left: 1px solid rgba(0,0,0,0.1);
+                    border-right: none;
                     img {
                         width: 5vw;
                     }
                 }
                 .newsText {
-                    width: 100%;
+                    width: 100vw;
                     padding: 0;
-                    margin: 1vw 0;
+                    margin: 0.8vw 0;
                     text-align: justify;
                 }
             }
@@ -361,6 +406,7 @@ section#news {
 
 // member -----------------------------------
 section#member {
+    background: $hover-color;
     ul {
         @include flex-Hcenter-Vcenter;
         li {
@@ -374,9 +420,10 @@ section#member {
                 height: auto;
             }
             span {
+                color: rgba(51, 51, 51, 0.6);
+                font-size: 14px;
                 margin: 12px 0 8px 10px;
                 padding-left: 8px;
-                font-size: 14px;
                 border-left: 5px solid $secondary-color;
             }
             h3 {
@@ -384,7 +431,6 @@ section#member {
                 padding-left: 4px;
             }
             @media screen and (max-width: 768px) {
-                width: 100vw;
                 margin: 0 1vw;
                 text-align: center;
                 img {
@@ -409,11 +455,10 @@ section#member {
     border: none;
     background: none;
     img {
-        width: 12vw;
+        width: 10vw;
         opacity: 0.4;
     }
 }
-
 
 
 // memoribila -----------------------------------
@@ -456,13 +501,11 @@ section#memoribila {
                 flex-direction: column;
                 margin-top: 0;
                 padding-top: 0;
-                width: 10vw;
             }
         }
         ul {
             li {
                 width: 25%;
-                display: block;
                 &:nth-child(odd) {
                     margin-top: -200px;
                 }
@@ -474,6 +517,11 @@ section#memoribila {
                 }
                 span.timelineText {
                     line-height: 1.5rem;
+                }
+                @media screen and (max-width: 1024px) {
+                    &:nth-child(odd) {
+                        margin-top: -215px;
+                    }
                 }
                 @media screen and (max-width: 576px) {
                     width: 70vw;
@@ -503,7 +551,6 @@ section#memoribila {
 }
 
 
-
 // footer -----------------------------------
 footer {
     @include flex-Hcenter-Vcenter;
@@ -513,8 +560,4 @@ footer {
     font-weight: 100;
     color: $font-color-light;
 }
-
-
-
-
 

@@ -5,32 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>熊厲害</title>
-    
-    <link rel="icon" href="https://www.commonhealth.com.tw/assets/images/favicon.ico">
-    <link rel="shortcut icon" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon.png" type="image/x-icon">
-    <link href="https://www.commonhealth.com.tw/assets/images/favicon-16x16.png" rel="apple-touch-icon" sizes="16x16">
-    <link href="https://www.commonhealth.com.tw/assets/images/favicon-32x32.png" rel="apple-touch-icon" sizes="32x32">
-    <link rel="apple-touch-icon" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon_58.png">
-    <link rel="apple-touch-icon" sizes="80x80" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon-80.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon-180.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="https://www.commonhealth.com.tw/assets/images/apple-touch-icon-167.png">
 
     <!-- css -->
     <link rel="stylesheet" href="css/animate.min.css"/>
     <link rel="stylesheet" href="css/slick.css"/>
     <link rel="stylesheet" href="css/style.css">
-
-    
 </head>
 <body>
-    <!--sidebar for mobile-->
-    <div id="mMenuList" class="sideMenu">
+    <!--menu for mobile-->
+    <nav id="mMenuList" class="sideMenu animate__animated animate__fadeIn animate__faster">
         <a class="closeBtn" onClick="closeMenu()">&times;</a>
         <ul>
-            <li class="animate__animated animate__fadeInUp animate__faster"><a href="#news" onClick="closeMenu()"><h3>最新消息</h3></a></li>
-            <li class="animate__animated animate__fadeInUp animate__fast"><a href="#member" onClick="closeMenu()"><h3>團隊成員</h3></a></li>
-            <li class="animate__animated animate__fadeInUp animate__delay"><a href="#memoribila" onClick="closeMenu()"><h3>大事記</h3></a></li>
+            <li class="animate__animated animate__fadeInUp animate__faster">
+                <a href="#news" onClick="closeMenu()">
+                <h3>最新消息</h3></a>
+            </li>
+            <li class="animate__animated animate__fadeInUp animate__fast">
+                <a href="#member" onClick="closeMenu()">
+                <h3>團隊成員</h3></a>
+            </li>
+            <li class="animate__animated animate__fadeInUp animate__delay">
+                <a href="#memoribila" onClick="closeMenu()">
+                <h3>大事記</h3></a>
+            </li>
             <li>
                 <div class="iconSocialMedia iconSocialMedia-fb">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -44,22 +41,12 @@
                 </div>
             </li>
         </ul>
-    </div> 
-    <script>
-        // menu for mobile
-        function openMenu() {
-            document.getElementById('mMenuList').style.display = 'block';
-        }
-        function closeMenu() {
-            document.getElementById('mMenuList').style.display = 'none';
-        }
-    </script>
+    </nav>
 
-
-    
+    <!--sidebar for pc-->
     <header id="navbar">
         <div class="container">
-            <h2 class="logo"><img src="https://www.commonhealth.com.tw/assets/images/favicon-32x32.png">熊厲害</h2>
+            <h2 class="logo"><img src="images/icon-comma.svg">熊厲害<small>提供健康、醫療資訊的線上平台</small></h2>
             <nav>
                 <ul>
                     <li><a href="#news"><span>最新消息</span></a></li>
@@ -80,8 +67,6 @@
             </nav>
         </div>
     </header>
-    
-    
 
     <div class="content">
         <!--1.kv-->
@@ -89,8 +74,7 @@
             <div class="container">
                 <div class="imgKv">
                     <span>
-                        熊厲害<br>是一個提供健康、醫療等資訊的線上平台，<br>
-                        我們提供醫師、護理師、營養師、運動教練等專家對於生活的建議及精確的健康資訊，<br>
+                        我們提供<br>醫師、護理師、營養師、運動教練等專家<br>對於生活的建議及精確的健康資訊，<br>
                         希望帶給大家健康且正確的的生活觀念
                     </span>
                 </div>
@@ -144,7 +128,7 @@
         <section id="member">
             <div class="container">
                 <h2>團隊成員</h2>
-                <article class="">
+                <article>
                     <ul class="multiple-items">
                         <li class="swiper-slide">
                             <img src="images/member-nutrition.jpg">
@@ -261,6 +245,14 @@
     </script>
     
     <script>
+        // menu for mobile
+        function openMenu() {
+            document.getElementById('mMenuList').style.display = 'block';
+        }
+        function closeMenu() {
+            document.getElementById('mMenuList').style.display = 'none';
+        }
+
         // fixed menu
         window.onscroll = function myFunction() {
             
@@ -273,7 +265,6 @@
                 navbar.classList.remove('sticky');
             }
         }
-
     </script>
 </body>
 </html>
